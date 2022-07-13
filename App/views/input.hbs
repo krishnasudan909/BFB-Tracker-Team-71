@@ -1,0 +1,106 @@
+<br>
+<div class="container-fluid col-12 mx-auto" style="height: 90vh;">
+    <div class="row no-gutter">
+        <div class="col-md-12 bg-light">
+            <div class="login col-12 d-flex align-items-center py-5" style="height: 90vh;">
+
+                <!-- Demo content-->
+                <div class="container  col-12">
+                    <div class="row col-12 mx-auto">
+                        <div class="col-lg-10 col-xl-12 mx-auto">
+                            <h3 class="display-4">NGO Input Form</h3>
+                            <p class="text-muted mb-4">Please enter the follwing details.</p>
+                            <form method="POST" action="/ngo/input"
+                                class="col-12 mx-auto d-flex flex-wrap justify-content-between">
+                                <div class="form-group col-5 mb-3">
+                                    <input id="orgname" name="orgname" type="text" placeholder="Organization Name"
+                                        required="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+                                {{!-- <div class="form-group  col-5  mb-3">
+                                    <input id="enrolledprog" name="prog" type="text" placeholder="Enrolled Program"
+                                        required="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div> --}}
+                                <div class="form-group col-5  mb-3">
+                                    <select class="form-select border-0 form-control rounded-pill border-0 shadow-sm px-4" aria-label="Default select example">
+                                        <option selected>Choose Enrolled Program</option>
+                                        <option value="1">NGO Feeding Program</option>
+                                        <option value="2">Breakfast Feeding Program for School Children</option>
+                                        <option value="3">Food Rescue Program</option>
+                                        <option value="3">Food Relief Program</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-5  mb-3">
+                                    <input id="repname" name="repname" type="text" placeholder="Representator Name"
+                                        required="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+                                <div class="form-group col-5  mb-3">
+                                    <input id="repid" name="repid" type="number" placeholder="Representator Id"
+                                        required="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+                                <div class="form-group col-5  mb-3">
+                                    <select class="form-select border-0 form-control rounded-pill border-0 shadow-sm px-4" aria-label="Default select example">
+                                        <option selected>Support provided for the month</option>
+                                        <option value="1">January</option>
+                                        <option value="2">February</option>
+                                        <option value="3">March</option>
+                                        <option value="3">April</option>
+                                        <option value="3">May</option>
+                                        <option value="3">June</option>
+                                        <option value="3">July</option>
+                                        <option value="3">August</option>
+                                        <option value="3">September</option>
+                                        <option value="3">October</option>
+                                        <option value="3">November</option>
+                                        <option value="3">December</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-5  mb-3">
+                                    <input id="foodreceived" name="foodamount" type="number"
+                                        placeholder="Amount of Food Recieved in kgs" required=""
+                                        class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+                                <div class="form-group col-5  mb-3">
+                                    <input id="under18" name="under18" type="number"
+                                        placeholder="Beneficiaries under age 18" required=""
+                                        class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+                                <div class="form-group col-5  mb-3">
+                                    <input id="under60" name="under60" type="number"
+                                        placeholder="Beneficiaries over age 60" required=""
+                                        class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+                                <div class="form-group  col-5 mb-3">
+                                    <input id="femalebeneficiaries" name="female" type="number"
+                                        placeholder="Female Beneficiaries" required=""
+                                        class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+                                <div class="form-group col-5  mb-3">
+                                    <input id="totalbeneficiaries" name="total" type="number"
+                                        placeholder="Total Number of Beneficiaries" required=""
+                                        class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+                                <div class="form-group  col-5 mb-3">
+                                    <input id="location" name="location" type="text" placeholder="Location Covered"
+                                        required="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+                                <div class="form-group col-5  mb-3">
+                                    <input id="location" name="was" type="text"
+                                        placeholder="Was this food distributed to any other charity partners from your network.<br>If yes, please share the partner names"
+                                        required="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+
+                                <button type="submit"
+                                    class="mx-auto btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm col-4">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- End -->
+
+            </div>
+        </div><!-- End -->
+
+    </div>
+</div>
+<br>
+<br>

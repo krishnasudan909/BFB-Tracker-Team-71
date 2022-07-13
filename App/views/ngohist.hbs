@@ -1,0 +1,34 @@
+<br>
+<div class="container-fluid" style="height: 90vh;">
+    <div class="row no-gutter">
+
+
+        <!-- The content half -->
+        <div class="col-md-6 bg-light">
+            <div class="login d-flex align-items-center py-5" style="height: 90vh;">
+                {{#each rendata}}
+                <!-- Demo content-->
+                <div class="container" >
+                    <div class="row">
+                        <div class="col-lg-10 col-xl-7 mx-auto">
+                            <h5 class="display-4">NGO</h5>
+                            <p class="text-muted mb-4">Organization Name {{this.name}}</p>
+                            <p class="text-muted mb-4">Enrolled Program {{this.program}}</p>
+                            <p class="text-muted mb-4">Amount of Food Recieved in kgs: {{this.amount_kgs}}</p>
+                            <p class="text-muted mb-4">Beneficiaries under age 18 {{this.beneficiary_18}}</p>
+                            <p class="text-muted mb-4">Beneficiaries over age 60 {{this.beneficiary_60}}</p>
+                            <p class="text-muted mb-4">Beneficiaries Female {{this.beneficiary_female}}</p>
+                            <p class="text-muted mb-4">Beneficiaries Total {{this.beneficiary_total}}</p>
+                             <a href="/main" class="btn btn-primary">Send Data</a>
+                        </div>
+                       
+                    </div>
+                </div><!-- End -->
+             {{/each}}
+            </div>
+        </div><!-- End -->
+
+    </div>
+</div>
+<br>
+<br> 

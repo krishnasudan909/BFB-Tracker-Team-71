@@ -1,0 +1,230 @@
+<div>
+</div>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<style type="text/css">
+    #myChart1 {
+        width: 600px;
+        height: 300px;
+        margin-left: 100px;
+    }
+
+    #myChart2 {
+        width: 600px;
+        height: 300px;
+    }
+
+    #myChart3 {
+        width: 600px;
+        height: 300px;
+        margin-left: 100px;
+    }
+
+    #myChart4 {
+        width: 600px;
+        height: 300px;
+    }
+    #myChart5 {
+        width: 600px;
+        height: 300px;
+        margin-left: 100px;
+    }
+
+    #myChart6 {
+        width: 600px;
+        height: 300px;
+    }
+</style>
+
+<body>
+    <div class="piechartfirst">
+        <div class="piechart12" style="display: inline-block;">
+            <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
+        </div>
+        <div class="piechart12" style="display: inline-block;">
+            <canvas id="myChart2" style="width:100%;max-width:600px"></canvas>
+        </div>
+    </div>
+    <div class="piechartsecond">
+        <div class="piechart34" style="display: inline-block;">
+            <canvas id="myChart3" style="width:100%;max-width:600px"></canvas>
+        </div>
+        <div class="piechart34" style="display: inline-block;">
+            <canvas id="myChart4" style="width:100%;max-width:600px"></canvas>
+        </div>
+    </div>
+    <div class="piecharthird">
+        <div class="piechart56" style="display: inline-block;">
+            <canvas id="myChart5" style="width:100%;max-width:600px"></canvas>
+        </div>
+        <div class="piechart56" style="display: inline-block;">
+            <canvas id="myChart6" style="width:100%;max-width:600px"></canvas>
+        </div>
+    </div>
+
+    <script>
+        var ngoData = [];
+        async function pie1() {
+            fetch(`./ngo/getbeneficiary_total`)
+                .then(res => res.json())
+                .then(data => {
+                    ngoData = data;
+                    var xValues = ["Vathsalya Charitable Trust", "Ananya Sevashrama", "Rays of Hope"];
+                    var yValues = ngoData;
+
+                    var barColors = ["#EC6B56", "#FFC154", "#47B39C"];
+
+                    new Chart("myChart1", {
+                        type: "pie", data: {
+                            labels: xValues,
+                            datasets: [{ backgroundColor: barColors, data: yValues }]
+                        }, options: {
+                            title: { display: true, text: "Total Beneficiaries" }
+                        }
+                    });
+                })
+                .catch()
+            {
+                console.log("Error");
+            }
+            return ngoData;
+        }
+        pie1();
+
+        var ngoData = [];
+        async function pie2() {
+            fetch(`./ngo/getbeneficiary_18`)
+                .then(res => res.json())
+                .then(data => {
+                    ngoData = data;
+                    var xValues = ["Vathsalya Charitable Trust", "Ananya Sevashrama", "Rays of Hope"];
+                    var yValues = ngoData;
+
+                    var barColors = ["#EC6B56", "#FFC154", "#47B39C"];
+
+                    new Chart("myChart2", {
+                        type: "pie", data: {
+                            labels: xValues,
+                            datasets: [{ backgroundColor: barColors, data: yValues }]
+                        }, options: {
+                            title: { display: true, text: "Beneficiaries under age 18" }
+                        }
+                    });
+                })
+                .catch()
+            {
+                console.log("Error");
+            }
+            return ngoData;
+        }
+        pie2();
+
+        var ngoData = [];
+        async function pie3() {
+            fetch(`./ngo/getbeneficiary_female`)
+                .then(res => res.json())
+                .then(data => {
+                    ngoData = data;
+                    var xValues = ["Vathsalya Charitable Trust", "Ananya Sevashrama", "Rays of Hope"];
+                    var yValues = ngoData;
+
+                    var barColors = ["#EC6B56", "#FFC154", "#47B39C"];
+
+                    new Chart("myChart3", {
+                        type: "pie", data: {
+                            labels: xValues,
+                            datasets: [{ backgroundColor: barColors, data: yValues }]
+                        }, options: {
+                            title: { display: true, text: "Female Beneficiaries" }
+                        }
+                    });
+                })
+                .catch()
+            {
+                console.log("Error");
+            }
+            return ngoData;
+        }
+        pie3();
+
+        var ngoData = [];
+        async function pie4() {
+            fetch(`./ngo/getfood_distributed`)
+                .then(res => res.json())
+                .then(data => {
+                    ngoData = data;
+                    var xValues = ["Vathsalya Charitable Trust", "Ananya Sevashrama", "Rays of Hope"];
+                    var yValues = ngoData;
+
+                    var barColors = ["#EC6B56", "#FFC154", "#47B39C"];
+
+                    new Chart("myChart4", {
+                        type: "pie", data: {
+                            labels: xValues,
+                            datasets: [{ backgroundColor: barColors, data: yValues }]
+                        }, options: {
+                            title: { display: true, text: "Food Distributed" }
+                        }
+                    });
+                })
+                .catch()
+            {
+                console.log("Error");
+            }
+            return ngoData;
+        }
+        pie4();
+        var ngoData=[];
+     async function pie5()
+    {
+            fetch(`./ngo/getprogram`)
+             .then(res => res.json())
+            .then(data => {
+                ngoData = data;
+                var xValues = ["Vathsalya Charitable Trust", "Ananya Sevashrama", "Rays of Hope"]; 
+                 var yValues = ngoData ; 
+
+                var barColors = [ "#EC6B56", "#FFC154", "#47B39C"]; 
+
+                new Chart("myChart5", { type: "pie", data: { labels: xValues,
+                datasets: [{ backgroundColor: barColors, data: yValues }] }, options: {
+                title: { display: true, text: "Program enrolled" } } });
+                })
+            .catch()
+            {
+                console.log("Error");
+            }
+        return ngoData;
+    }
+    pie5();
+
+var ngoData=[];
+     async function pie6()
+    {
+            fetch(`./ngo/getlocation`)
+             .then(res => res.json())
+            .then(data => {
+                
+                ngoData = data;
+                var xValues = ["Vathsalya Charitable Trust", "Ananya Sevashrama", "Rays of Hope"]; 
+                 var yValues = ngoData ; 
+
+                var barColors = ["#EC6B56", "#FFC154", "#47B39C"]; 
+
+                new Chart("myChart6", { type: "pie", data: { labels: xValues,
+                datasets: [{ backgroundColor: barColors, data: yValues }] }, options: {
+                title: { display: true, text: "Location Covered" } } });
+                })
+            .catch()
+            {
+                console.log("Error");
+            }
+        return ngoData;
+    }
+    pie6();
+    </script>
+
+</body>
+
+</html>
+</div> <!-- /.container -->
